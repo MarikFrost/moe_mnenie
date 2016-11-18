@@ -1,0 +1,532 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Документ без названия</title>
+<link href="Style/style1.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="JS/jquery-1.7.2.min.js"></script>
+<script type="text/javascript"> 
+function theRotator() {
+	// Устанавливаем прозрачность всех картинок в 0
+$('div#slayder ul li').css({opacity:	 0.0});
+ 
+	// Берем первую картинку и показываем ее (по пути включаем полную видимость)
+	$('div#slayder ul li:first').css({opacity: 1.0});
+ 
+	// Вызываем функцию rotate для запуска слайдшоу, 5000 = смена картинок происходит раз в 5 секунд
+	setInterval('rotate()',3000);
+}
+ 
+function rotate() {	
+	// Берем первую картинку
+	var current = ($('div#slayder ul li.show')?  $('div#slayder ul li.show') : $('div#slayder ul li:first'));
+ 
+	// Берем следующую картинку, когда дойдем до последней начинаем с начала
+	var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div#slayder ul li:first') :current.next()) : $('div#slayder ul li:first'));	
+ 
+	// Расскомментируйте, чтобы показвать картинки в случайном порядке
+	// var sibs = current.siblings();
+	// var rndNum = Math.floor(Math.random() * sibs.length );
+	// var next = $( sibs[ rndNum ] );
+ 
+	// Подключаем эффект растворения/затухания для показа картинок, css-класс show имеет больший z-index
+	next.css({opacity: 0.0})
+	.addClass('show')
+	.animate({opacity: 1.0}, 1000);
+ 
+	// Прячем текущую картинку
+	current.animate({opacity: 0.0}, 1000)
+	.removeClass('show');
+};
+ 
+$(document).ready(function() {		
+	// Запускаем слайдшоу
+	theRotator();
+});
+</script>
+</head>
+<body>
+    <div id="head"></div>
+    <table id="menuOne">  <!-- ПЕРВОЕ О нас -->
+                    <tr> 
+                        <th id="partLeft"                class="dimensionless"> 
+                            <div id="partLeftIn"         class="dimensionlessIn"> 
+                                
+                            </div>            
+                        </th>
+                        
+                        <th id="partAbout"               class="menuOne">       
+                            <a href="#menuOne" id="partAboutIn"        class="menuOneIn">       
+                                <h1 class="menuTextH1">О нас</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="partStore"               class="menuOne">       
+                            <a href="#StorePartStore" id="partStoreIn"        class="menuOneIn" onclick="rad1()">       
+                                <h1 class="menuTextH1">Магазины</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="partRecreational"        class="menuOne">       
+                            <a href="#RecreationalPartStoreIn"  id="partRecreationalIn" class="menuOneIn">       
+                                <h1 class="menuTextH1" >Заведения</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="partBeautySalon"         class="menuOne">       
+                            <a href="#menuBeautySalon" id="partBeautySalonIn"  class="menuOneIn">       
+                                <h1 class="menuTextH1" id="salon">Салоны</h1>
+                                <h1 class="menuTextH1" id="kras">Красоты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="partPharmacy"            class="menuOne">       
+                            <a href="#menuPharmacy" id="partPharmacyIn"     class="menuOneIn">       
+                                <h1 class="menuTextH1" >Аптеки</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="partOther"               class="menuOne">       
+                            <a href="#menuOther" id="partOtherIn"        class="menuOneIn">       
+                                <h1 class="menuTextH1" >Другие</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="partContact"             class="menuOne">       
+                            <a href="#menuContact" id="partContactIn"      class="menuOneIn">       
+                                <h1 class="menuTextH1" >Контакты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="partRight"               class="dimensionless"> 
+                            <div id="partRightIn"        class="dimensionlessIn"> </div>
+                        </th>
+                    </tr>
+    </table>
+    
+    <div id="slayder">
+        <ul>
+            <li class="show"> <img src="images/fon_nk_one.jpg" alt="Image One">   </li>
+            <li>              <img src="images/fon_nk_three.jpg" alt="Image Two"> </li>
+            <li>              <img src="images/fon_nk_two.jpg" alt="Image Three"> </li>
+        </ul>
+    </div>
+    
+    <table id="menuStore">   <!-- Меню Магазины -->
+                    <tr> 
+                        <th id="StorePartLeft"                class="StoreDimensionless"> 
+                            <div id="StorePartLeftIn"         class="StoreDimensionlessIn"> </div>            
+                        </th>
+                        
+                        <th id="StorePartAbout"               class="menuStore">       
+                            <a href="#menuOne" id="StorePartAboutIn"        class="menuStoreIn">       
+                                <h1 class="menuTextH1">О нас</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="StorePartStore"               class="menuStore">       
+                            <a id="StorePartStoreIn"        class="menuStoreIn">       
+                                <h1 class="menuTextH1">Магазины</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="StorePartRecreational"        class="menuStore">       
+                            <a href="#menuRecreational"  id="StorePartRecreationalIn" class="menuStoreIn">       
+                                <h1 class="menuTextH1" >Заведения</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="StorePartBeautySalon"         class="menuStore">       
+                            <a href="#menuBeautySalon" id="StorePartBeautySalonIn"  class="menuStoreIn">       
+                                <h1 class="menuTextH1" id="salon">Салоны</h1>
+                                <h1 class="menuTextH1" id="kras">Красоты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="StorePartPharmacy"            class="menuStore">       
+                            <a href="#menuPharmacy" id="StorePartPharmacyIn"     class="menuStoreIn">       
+                                <h1 class="menuTextH1" >Аптеки</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="StorePartOther"               class="menuStore">       
+                            <a href="#menuOther" id="StorePartOtherIn"        class="menuStoreIn">       
+                                <h1 class="menuTextH1" >Другие</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="StorePartContact"             class="menuStore">       
+                            <a href="#menuContact" id="StorePartContactIn"      class="menuStoreIn">       
+                                <h1 class="menuTextH1" >Контакты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="StorePartRight"               class="StoreDimensionless"> 
+                            <div id="StorePartRightIn"        class="StoreDimensionlessIn"> </div>
+                        </th>
+                    </tr>
+    </table>
+    <div id="LineMenuStore"></div>
+    <div id="StoreContent">
+        <div id="products" class="classStore">
+            <div id="productName" class="strName"></div>
+            <div id="ATB" class="classProduct"></div>
+            <div id="FRESH" class="classProduct"></div>
+            <div id="SIMPATIK" class="classProduct"></div>
+            <div id="BigName" class="strBig"></div>
+        </div>
+        
+        <div id="lineKategoryProduct" class="classLineKategory"></div>
+        
+        <div id="tehnical" class="classStore">
+            <div id="tehnicalName" class="strName"></div>
+            <div id="Eldorado" class="classProduct"></div>
+            <div id="Foxtrot" class="classProduct"></div>
+            <div id="TehnoMir" class="classProduct"></div>
+            <div id="tehnicalBigName" class="strBig"></div>
+        </div>
+        
+        <div id="lineKategory" class="classLineKategory"></div>
+        
+        <div id="building" class="classStore">
+            <div id="buildingName" class="strName"></div>
+            <div id="Tridzaty" class="classProduct"></div>
+            <div id="Vlastelin" class="classProduct"></div>
+            <div id="" class="classProduct"></div>
+            <div id="buildingBigName" class="strBig"></div>
+        </div>
+        
+        <div id="lineKategory" class="classLineKategory"></div>
+        
+        <div id="furniture" class="classStore">
+            <div id="furnitureName" class="strName"></div>
+            <div id="Bagira" class="classProduct"></div>
+            <div id="Partner" class="classProduct"></div>
+            <div id="Mebelynaya" class="classProduct"></div>
+            <div id="furnitureBigName" class="strBig"></div>
+        </div>
+        
+        <div id="lineKategory" class="classLineKategory"></div>
+        
+    </div>
+    <table id="menuRecreational">   <!-- Меню заведения-->
+                    <tr> 
+                        <th id="RecreationalPartLeft"                class="RecreationalDimensionless"> 
+                            <div id="RecreationalPartLeftIn"         class="RecreationalDimensionlessIn"> </div>            
+                        </th>
+                        
+                        <th id="RecreationalPartAbout"               class="menuRecreational">       
+                            <a href="#menuOne" id="RecreationalPartAboutIn"        class="menuRecreationalIn">       
+                                <h1 class="menuTextH1">О нас</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="RecreationalPartStore"               class="menuRecreational">       
+                            <a href="#StorePartStoreIn" id="RecreationalPartStoreIn"        class="menuRecreationalIn">       
+                                <h1 class="menuTextH1">Магазины</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="RecreationalPartRecreational"        class="menuRecreational">       
+                            <a id="RecreationalPartRecreationalIn" class="menuRecreationalIn">       
+                                <h1 class="menuTextH1" >Заведения</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="RecreationalPartBeautySalon"         class="menuRecreational">       
+                            <a href="#menuBeautySalon" id="RecreationalPartBeautySalonIn"  class="menuRecreationalIn">       
+                                <h1 class="menuTextH1" id="salon">Салоны</h1>
+                                <h1 class="menuTextH1" id="kras">Красоты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="RecreationalPartPharmacy"            class="menuRecreational">       
+                            <a href="#menuPharmacy" id="RecreationalPartPharmacyIn"     class="menuRecreationalIn">       
+                                <h1 class="menuTextH1" >Аптеки</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="RecreationalPartOther"               class="menuRecreational">       
+                            <a href="#menuOther" id="RecreationalPartOtherIn"        class="menuRecreationalIn">       
+                                <h1 class="menuTextH1" >Другие</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="RecreationalPartContact"             class="menuRecreational">       
+                            <a href="#menuContact" id="RecreationalPartContactIn"      class="menuRecreationalIn">       
+                                <h1 class="menuTextH1" >Контакты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="RecreationalPartRight"               class="RecreationalDimensionless"> 
+                            <div id="RecreationalPartRightIn"        class="RecreationalDimensionlessIn"> </div>
+                        </th>
+                    </tr>
+    </table>
+    <div id="LineMenuRecreational"></div>
+    <div id="RecreationalContent">
+        <div id="products" class="classStore">
+            <div id="ATB" class="classProduct"></div>
+            <div id="FRESH" class="classProduct"></div>
+            <div id="SIMPATIK" class="classProduct"></div>
+        </div>
+        
+        <div id="lineKategory" class="classLineKategory"></div>
+        
+        <div id="tehnical" class="classStore">
+            <div id="Eldorado" class="classProduct"></div>
+            <div id="Foxtrot" class="classProduct"></div>
+            <div id="TehnoMir" class="classProduct"></div>
+        </div>
+        
+        <div id="lineKategory" class="classLineKategory"></div>
+        
+        <div id="building" class="classStore">
+            <div id="Tridzaty" class="classProduct"></div>
+            <div id="Vlastelin" class="classProduct"></div>
+            <div id="" class="classProduct"></div>
+        </div>
+        
+        <div id="lineKategory" class="classLineKategory"></div>
+        
+        <div id="furniture" class="classStore">
+            <div id="Bagira" class="classProduct"></div>
+            <div id="Partner" class="classProduct"></div>
+            <div id="Mebelynaya" class="classProduct"></div>
+        </div>
+    </div>
+    
+    <table id="menuBeautySalon">   <!-- Меню салоны красоты -->
+                    <tr> 
+                        <th id="BeautySalonPartLeft"                class="BeautySalonDimensionless"> 
+                            <div id="BeautySalonPartLeftIn"         class="BeautySalonDimensionlessIn"> </div>            
+                        </th>
+                        
+                        <th id="BeautySalonPartAbout"               class="menuBeautySalon">       
+                            <a href="#menuOne" id="BeautySalonPartAboutIn"        class="menuBeautySalonIn">       
+                                <h1 class="menuTextH1">О нас</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="BeautySalonPartStore"               class="menuBeautySalon">       
+                            <a href="#StorePartStoreIn" id="BeautySalonPartStoreIn"        class="menuBeautySalonIn">       
+                                <h1 class="menuTextH1">Магазины</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="BeautySalonPartRecreational"        class="menuBeautySalon">       
+                            <a href="#RecreationalPartRecreationalIn" id="BeautySalonPartRecreationalIn" class="menuBeautySalonIn">       
+                                <h1 class="menuTextH1" >Заведения</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="BeautySalonPartBeautySalon"         class="menuBeautySalon">       
+                            <a id="BeautySalonPartBeautySalonIn"  class="menuBeautySalonIn">       
+                                <h1 class="menuTextH1" id="salon">Салоны</h1>
+                                <h1 class="menuTextH1" id="kras">Красоты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="BeautySalonPartPharmacy"            class="menuBeautySalon">       
+                            <a href="#menuPharmacy" id="BeautySalonPartPharmacyIn"     class="menuBeautySalonIn">       
+                                <h1 class="menuTextH1" >Аптеки</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="BeautySalonPartOther"               class="menuBeautySalon">       
+                            <a href="#menuOther" id="BeautySalonPartOtherIn"        class="menuBeautySalonIn">       
+                                <h1 class="menuTextH1" >Другие</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="BeautySalonPartContact"             class="menuBeautySalon">       
+                            <a href="#menuContact" id="BeautySalonPartContactIn"      class="menuBeautySalonIn">       
+                                <h1 class="menuTextH1" >Контакты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="BeautySalonPartRight"               class="BeautySalonDimensionless"> 
+                            <div id="BeautySalonPartRightIn"        class="BeautySalonDimensionlessIn"> </div>
+                        </th>
+                    </tr>
+    </table>
+    <div id="LineMenuBeautySalon"></div>
+    <div id="BeautySalonContent"></div>
+    
+    <table id="menuPharmacy">   <!-- Меню аптеки-->
+                    <tr> 
+                        <th id="PharmacyPartLeft"                class="PharmacyDimensionless"> 
+                            <div id="PharmacyPartLeftIn"         class="PharmacyDimensionlessIn"> </div>            
+                        </th>
+                        
+                        <th id="PharmacyPartAbout"               class="menuPharmacy">       
+                            <a href="#menuOne" id="PharmacyPartAboutIn"        class="menuPharmacyIn">       
+                                <h1 class="menuTextH1">О нас</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="PharmacyPartStore"               class="menuPharmacy">       
+                            <a href="#StorePartStoreIn" id="PharmacyPartStoreIn"        class="menuPharmacyIn">       
+                                <h1 class="menuTextH1">Магазины</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="PharmacyPartRecreational"        class="menuPharmacy">       
+                            <a href="#RecreationalPartRecreationalIn" id="PharmacyPartRecreationalIn" class="menuPharmacyIn">       
+                                <h1 class="menuTextH1" >Заведения</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="PharmacyPartBeautySalon"         class="menuPharmacy">       
+                            <a href="#BeautySalonPartBeautySalonIn" id="PharmacyPartBeautySalonIn"  class="menuPharmacyIn">       
+                                <h1 class="menuTextH1" id="salon">Салоны</h1>
+                                <h1 class="menuTextH1" id="kras">Красоты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="PharmacyPartPharmacy"            class="menuPharmacy">       
+                            <a id="PharmacyPartPharmacyIn"     class="menuPharmacyIn">       
+                                <h1 class="menuTextH1" >Аптеки</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="PharmacyPartOther"               class="menuPharmacy">       
+                            <a href="#menuOther" id="PharmacyPartOtherIn"        class="menuPharmacyIn">       
+                                <h1 class="menuTextH1" >Другие</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="PharmacyPartContact"             class="menuPharmacy">       
+                            <a href="#menuContact" id="PharmacyPartContactIn"      class="menuPharmacyIn">       
+                                <h1 class="menuTextH1" >Контакты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="PharmacyPartRight"               class="PharmacyDimensionless"> 
+                            <div id="PharmacyPartRightIn"        class="PharmacyDimensionlessIn"> </div>
+                        </th>
+                    </tr>
+    </table>
+    <div id="LineMenuPharmacy"></div>
+    <div id="PharmacyContent"></div>
+    
+    <table id="menuOther">   <!-- Меню другие -->
+                    <tr> 
+                        <th id="OtherPartLeft"                class="OtherDimensionless"> 
+                            <div id="OtherPartLeftIn"         class="OtherDimensionlessIn"> </div>            
+                        </th>
+                        
+                        <th id="OtherPartAbout"               class="menuOther">       
+                            <a href="#menuOne" id="OtherPartAboutIn"        class="menuOtherIn">       
+                                <h1 class="menuTextH1">О нас</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="OtherPartStore"               class="menuOther">       
+                            <a href="#StorePartStoreIn" id="OtherPartStoreIn"        class="menuOtherIn">       
+                                <h1 class="menuTextH1">Магазины</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="OtherPartRecreational"        class="menuOther">       
+                            <a href="#RecreationalPartRecreationalIn" id="OtherPartRecreationalIn" class="menuOtherIn">       
+                                <h1 class="menuTextH1" >Заведения</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="OtherPartBeautySalon"         class="menuOther">       
+                            <a href="#BeautySalonPartBeautySalonIn" id="OtherPartBeautySalonIn"  class="menuOtherIn">       
+                                <h1 class="menuTextH1" id="salon">Салоны</h1>
+                                <h1 class="menuTextH1" id="kras">Красоты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="OtherPartPharmacy"            class="menuOther">       
+                            <a href="#menuPharmacy" id="OtherPartPharmacyIn"     class="menuOtherIn">       
+                                <h1 class="menuTextH1" >Аптеки</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="OtherPartOther"               class="menuOther">       
+                            <a id="OtherPartOtherIn"        class="menuOtherIn">       
+                                <h1 class="menuTextH1" >Другие</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="OtherPartContact"             class="menuOther">       
+                            <a href="#menuContact" id="OtherPartContactIn"      class="menuOtherIn">       
+                                <h1 class="menuTextH1" >Контакты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="OtherPartRight"               class="OtherDimensionless"> 
+                            <div id="OtherPartRightIn"        class="OtherDimensionlessIn"> </div>
+                        </th>
+                    </tr>
+    </table>
+    <div id="LineMenuOther"></div>
+    <div id="OtherContent"></div>
+    
+    <table id="menuContact">   <!-- Меню контакты -->
+                    <tr> 
+                        <th id="ContactPartLeft"                class="ContactDimensionless"> 
+                            <div id="ContactPartLeftIn"         class="ContactDimensionlessIn"> </div>            
+                        </th>
+                        
+                        <th id="ContactPartAbout"               class="menuContact">       
+                            <a href="#menuOne" id="ContactPartAboutIn"        class="menuContactIn">       
+                                <h1 class="menuTextH1">О нас</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="ContactPartStore"               class="menuContact">       
+                            <a href="#StorePartStoreIn" id="ContactPartStoreIn"        class="menuContactIn">       
+                                <h1 class="menuTextH1">Магазины</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="ContactPartRecreational"        class="menuContact">       
+                            <a href="#RecreationalPartRecreationalIn" id="ContactPartRecreationalIn" class="menuContactIn">       
+                                <h1 class="menuTextH1" >Заведения</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="ContactPartBeautySalon"         class="menuContact">       
+                            <a href="#BeautySalonPartBeautySalonIn" id="ContactPartBeautySalonIn"  class="menuContactIn">       
+                                <h1 class="menuTextH1" id="salon">Салоны</h1>
+                                <h1 class="menuTextH1" id="kras">Красоты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="ContactPartPharmacy"            class="menuContact">       
+                            <a href="#menuPharmacy" id="ContactPartPharmacyIn"     class="menuContactIn">       
+                                <h1 class="menuTextH1" >Аптеки</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="ContactPartOther"               class="menuContact">       
+                            <a href="#menuOther" id="ContactPartOtherIn"        class="menuContactIn">       
+                                <h1 class="menuTextH1" >Другие</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="ContactPartContact"             class="menuContact">       
+                            <a id="ContactPartContactIn"      class="menuContactIn">       
+                                <h1 class="menuTextH1" >Контакты</h1>
+                            </a>
+                        </th>
+                        
+                        <th id="ContactPartRight"               class="ContactDimensionless"> 
+                            <div id="ContactPartRightIn"        class="ContactDimensionlessIn"> </div>
+                        </th>
+                    </tr>
+    </table>
+    <div id="LineMenuContact"></div>
+    <div id="ContactContent"></div>
+    
+    
+    
+
+</div>
+</body>
+</html>

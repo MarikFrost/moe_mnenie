@@ -1,0 +1,614 @@
+@import url(reset.css);
+body{
+    background-image: url(../images/fon_body.jpg);
+    background-repeat: repeat
+}
+#head{  /*шапка*/
+    width: 100%;
+    height: 163px;
+    outline: 1px solid #000000;
+}
+/*-----------------------------------------------Начало Меню Один ----------------------------*/
+#menuOne{   /*блок меню*/
+    width: 100%;
+}
+#partLeft{ /* левый без размерный блок*/
+    background-color: #99333e;
+}
+#partRight{    /* правый без размерный блок*/
+    background-color: #499197;
+}
+.menuOne{   /*клас блоков меню с размером */
+    width: 160px;
+}
+#partAbout{ /* блок меню О нас */
+    background-color: #99333e;
+    border-right: 1px solid #802a34;
+}
+#partStore{  /* блок меню магазин*/
+    background-color: #cf633d;
+    border-right: 1px solid #ad5333;
+}
+#partRecreational{ /* блок меню заведения*/
+    background-color: #e89745;
+    border-right: 1px solid #c27e3a;
+}
+#partBeautySalon{   /* блок меню Салон Красоты*/
+    background-color: #33664d;
+    border-right: 1px solid #2a5540;
+}
+#partPharmacy{   /* блок меню Аптеки*/
+    background-color: #c46a02;
+    border-right: 1px solid #a45802;
+}
+#partOther{   /* блок меню другие*/
+    background-color: #97AD34;
+    border-right: 1px solid #798B2A;
+}
+#partContact{  /* блок меню Контанты*/
+    background-color: #499197;
+}
+.dimensionlessIn{ /* класс безразмерных блоков внутри*/
+    height: 80px;
+    margin: 12px 0;
+    padding-bottom: 5px;
+}
+#partLeftIn{ /* левый безразмерный блок внутри*/ 
+    border: 1px solid #802a34;
+    border-left: none;
+}
+#partRightIn{ /* правый безразмерный блок внутри*/ 
+    border: 1px solid #3d797e;
+    border-right: none;
+}
+.menuOneIn{  /* класс внутрених блоков с размером */
+    width: 180px;
+    height: 80px;
+    margin: 12px 0;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+#partAboutIn{ /* внутрений блок О нас*/
+    border-top: 1px solid #802a34;
+    border-bottom: 1px solid #802a34;
+}
+.menuTextH1{ /* клас блоком h1 в меню*/
+    font-size: 25px;
+    margin-top: 28px;
+    color: #ffffff;
+    font-weight:bold;
+    text-transform: uppercase;
+    font-family:Comic Sans MS;
+}
+#salon{ /* h1 блока салон красоты*/
+    margin-top: 15px;
+}
+#kras{ /* h1 блока салон красоты*/
+    margin-top: 1px;
+}
+#partStoreIn{ /* внутрений блок Магазин*/
+    border-top: 1px solid #ad5333;
+    border-bottom: 1px solid #ad5333;
+}
+#partRecreationalIn{ /* внутрений блок Заведения*/
+    border-top: 1px solid #c27e3a;
+    border-bottom: 1px solid #c27e3a;
+}
+#partBeautySalonIn{ /* внутрений блок Салон красоты*/
+    border-top: 1px solid #2a5540;
+    border-bottom: 1px solid #2a5540;
+}
+#partPharmacyIn{ /* внутрений блок Аптеки*/
+    border-top: 1px solid #a45802;
+    border-bottom: 1px solid #a45802;
+}
+#partOtherIn{ /* внутрений блок Другие*/
+    border-top: 1px solid #798B2A;
+    border-bottom: 1px solid #798B2A;
+}
+#partContactIn{ /* внутрений блок Контакты*/
+    border-top: 1px solid #3d797e;
+    border-bottom: 1px solid #3d797e;
+}
+/*-----------------------------------------------Конец Меню Один ----------------------------*/
+/* -----------------------------------------------Начало Слайдера ---------------------------*/
+#slayder{    /* слайдер и рамка слайдера*/
+    position:relative;
+    height:600px;
+    margin: 4px auto 0 auto;
+    width: 1200px;
+    border: 1px solid #505050;
+     box-shadow:
+       0 0 0 2px #6B6B6B,
+       0 0 0 3px #8B8B8B,
+       0 0 0 3px #B2B2B2,
+       0 0 0 4px #dedede;
+}
+#slayder ul li { /* части слайдера*/
+    float:left;
+    position:absolute;
+    list-style: none;
+}
+#slayder ul li.show{
+    z-index:500;
+}
+/* -----------------------------------------------Конец Слайдера ---------------------------*/
+/* ----------------------------------------------- Начало Магазин меню ----------------------*/
+#menuStore{   /*блок меню Магазин*/
+    width: 100%;
+    background-color: #252525;
+    margin-top: 6px;
+}
+.menuStore{   /*клас блоков меню с размером */
+    width: 160px;
+    border-right: #1f1f1f;
+    border-left: 1px solid #1f1f1f;
+}
+#StorePartStore{
+    background-color: #cf633d;
+    border-bottom: 1px solid #c15c39;
+}
+#StorePartStoreIn{
+    border-bottom: none;
+    border-top: 1px solid #ad5333;
+}
+#StorePartAbout{ /*у блока About убрали рамку с лева*/
+    border-left: none;
+}
+.StoreDimensionlessIn{ /* класс безразмерных блоков внутри*/
+    height: 80px;
+    margin: 12px 0;
+    padding-bottom: 5px;
+    border: 1px solid #1f1f1f;
+}
+#StorePartLeftIn{ /* левый безразмерный блок внутри*/ 
+    border-left: none;
+}
+#StorePartRightIn{ /* правый безразмерный блок внутри*/ 
+    border-right: none;
+}
+.menuStoreIn{  /* класс внутрених блоков с размером */
+    width: 180px;
+    height: 80px;
+    margin: 12px 0;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-top: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+}
+#LineMenuStore{  /* блок с низу меню */
+    height: 13px;
+    width: 100%;
+    background-color: #cf633d; 
+}
+/* ----------------------------------------------- Конец Магазин меню ----------------------*/
+/* ----------------------------------------------- Начало контент блока магазин ----------------------*/
+#StoreContent{  /* блок с контентом */
+    width: 1260px;
+    outline: 0px solid #ffffff;
+    margin: 0 auto;
+    background-image: url(../images/headFon.png);
+}
+.classLineKategory{ /* линия между категориями */
+    width: 1360px;
+    height: 4px;
+    margin: 0 -50px 0 -50px;
+    background-color: #CF633D;
+}
+.classStore{ /* класс с идентификатором store*/
+    width: 100%;
+    height: 300px;
+    outline: 0px solid #ffffff; 
+    position: relative;
+}
+.classProduct{ /* класс с идентификатором product*/
+    background-image: url(../images/line_out.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 420px;
+    height: 100%;
+    outline: 0px solid #2a5540;
+    float: left;
+}
+.strName{ /* выдвигающиеся блоки с названиями*/
+    height: 300px;
+    left: 0;
+    top: 0;
+    width: 50px;
+    position: absolute;
+    outline: 0px solid #5256DB;
+    display: none;
+    background-color: #CF633D;
+    
+}
+.strBig{ /* выдвигающиеся блоки Еще*/
+    height: 300px;
+    right: 0;
+    top: 0;
+    width: 50px;
+    position: absolute;
+    outline: 0px solid #5256DB;
+    display: none;
+    background-color: #CF633D;
+    
+}
+#products:hover #BigName{ /* что делается при наведении на блок продуктовых магазинов с блоком BigName*/
+    right:-50px;
+    top: 0; 
+    display: block;
+}
+#tehnical:hover #tehnicalBigName{ /* что делается при наведении на блок продуктовых магазинов с блоком tehnicalBigName*/
+    right:-50px;
+    top: 0; 
+    display: block;
+}
+#building:hover #buildingBigName{ /* что делается при наведении на блок продуктовых магазинов с блоком tehnicalBigName*/
+    right:-50px;
+    top: 0; 
+    display: block;
+}
+#furniture:hover #furnitureBigName{ /* что делается при наведении на блок продуктовых магазинов с блоком tehnicalBigName*/
+    right:-50px;
+    top: 0; 
+    display: block;
+}
+#products:hover #productName{ /* что делается при наведении на блок продуктовых магазинов с блоком productName*/
+    left: -50px;
+    top: 0; 
+    display: block;
+}
+#tehnical:hover #tehnicalName{ /* что делается при наведении на блок продуктовых магазинов с блоком tehnicalName*/
+    left: -50px;
+    top: 0; 
+    display: block;
+}
+#building:hover #buildingName{ /* что делается при наведении на блок продуктовых магазинов с блоком tehnicalName*/
+    left: -50px;
+    top: 0; 
+    display: block;
+}
+#furniture:hover #furnitureName{ /* что делается при наведении на блок продуктовых магазинов с блоком tehnicalName*/
+    left: -50px;
+    top: 0; 
+    display: block;
+}
+#ATB, #Eldorado, #Tridzaty, #Bagira{ /* блок с магазином АТБ */
+    background: none;
+ }
+
+#productName{
+    background-image: url(../images/product.png);
+} 
+#tehnicalName{
+    background-image: url(../images/tehnikal.png);
+}
+#buildingName{
+    background-image: url(../images/stroy.png);
+}
+#furnitureName{
+    background-image: url(../images/mebel.png);
+}
+.strBig{
+    background-image: url(../images/echo.png);
+}
+/* ----------------------------------------------- Контент блока магазин ----------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------- Начало заведения меню ----------------------*/
+#menuRecreational{   /*блок меню Магазин*/
+    width: 100%;
+    background-color: #252525;
+    /*margin-top: 6px;*/
+}
+.menuRecreational{   /*клас блоков меню с размером */
+    width: 160px;
+    border-right: #1f1f1f;
+    border-left: 1px solid #1f1f1f;
+}
+#RecreationalPartRecreational{
+    background-color: #e89745;
+    border-bottom: 1px solid #d88c40;
+}
+#RecreationalPartRecreationalIn{
+    border-bottom: none;
+    border-top: 1px solid #c27e3a;
+}
+#RecreationalPartAbout{ /*у блока About убрали рамку с лева*/
+    border-left: none;
+}
+.RecreationalDimensionlessIn{ /* класс безразмерных блоков внутри*/
+    height: 80px;
+    margin: 12px 0;
+    padding-bottom: 5px;
+    border: 1px solid #1f1f1f;
+}
+#RecreationalPartLeftIn{ /* левый безразмерный блок внутри*/ 
+    border-left: none;
+}
+#RecreationalPartRightIn{ /* правый безразмерный блок внутри*/ 
+    border-right: none;
+}
+.menuRecreationalIn{  /* класс внутрених блоков с размером */
+    width: 180px;
+    height: 80px;
+    margin: 12px 0;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-top: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+}
+#LineMenuRecreational{  /* блок с низу меню */
+    height: 13px;
+    width: 100%;
+    background-color: #e89745; 
+}
+/* ----------------------------------------------- Конец блока заведения меню ----------------------*/
+/* ----------------------------------------------- Начало контент блока заведения ----------------------*/
+#RecreationalContent{
+    width: 1260px;
+    outline: 0px solid #ffffff;
+    margin: 0 auto;
+    background-image: url(../images/fon_StoreContent.jpg);
+    opacity: 0.7;
+}
+/* ----------------------------------------------- Конец контент блока заведения ----------------------*/
+
+/* ----------------------------------------------- Начало блока меню салон красоты ----------------------*/
+#menuBeautySalon{   /*блок меню Магазин*/
+    width: 100%;
+    background-color: #252525;
+    margin-top: 6px;
+}
+.menuBeautySalon{   /*клас блоков меню с размером */
+    width: 160px;
+    border-right: #1f1f1f;
+    border-left: 1px solid #1f1f1f;
+}
+#BeautySalonPartBeautySalon{
+    background-color: #33664d;
+    border-bottom: 1px solid #306149;
+}
+#BeautySalonPartBeautySalonIn{
+    border-bottom: none;
+    border-top: 1px solid #2a5540;
+}
+#BeautySalonPartAbout{ /*у блока About убрали рамку с лева*/
+    border-left: none;
+}
+.BeautySalonDimensionlessIn{ /* класс безразмерных блоков внутри*/
+    height: 80px;
+    margin: 12px 0;
+    padding-bottom: 5px;
+    border: 1px solid #1f1f1f;
+}
+#BeautySalonPartLeftIn{ /* левый безразмерный блок внутри*/ 
+    border-left: none;
+}
+#BeautySalonPartRightIn{ /* правый безразмерный блок внутри*/ 
+    border-right: none;
+}
+.menuBeautySalonIn{  /* класс внутрених блоков с размером */
+    width: 180px;
+    height: 80px;
+    margin: 12px 0;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-top: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+}
+#LineMenuBeautySalon{  /* блок с низу меню */
+    height: 13px;
+    width: 100%;
+    background-color: #33664d; 
+}
+/* ----------------------------------------------- Конец блока меню салон красоты ----------------------*/
+/* ----------------------------------------------- Контент блока заведения ----------------------*/
+#BeautySalonContent{
+    height: 800px;
+}
+/* ----------------------------------------------- Контент блока заведения ----------------------*/
+/* ----------------------------------------------- Начало блока меню аптеки ----------------------*/
+#menuPharmacy{   /*блок меню Магазин*/
+    width: 100%;
+    background-color: #252525;
+    margin-top: 6px;
+}
+.menuPharmacy{   /*клас блоков меню с размером */
+    width: 160px;
+    border-right: #1f1f1f;
+    border-left: 1px solid #1f1f1f;
+}
+#PharmacyPartPharmacy{
+    background-color: #c46a02;
+    border-bottom: 1px solid #b76202;
+}
+#PharmacyPartPharmacyIn{
+    border-bottom: none;
+    border-top: 1px solid #a45802;
+}
+#PharmacyPartAbout{ /*у блока About убрали рамку с лева*/
+    border-left: none;
+}
+.PharmacyDimensionlessIn{ /* класс безразмерных блоков внутри*/
+    height: 80px;
+    margin: 12px 0;
+    padding-bottom: 5px;
+    border: 1px solid #1f1f1f;
+}
+#PharmacyPartLeftIn{ /* левый безразмерный блок внутри*/ 
+    border-left: none;
+}
+#PharmacyPartRightIn{ /* правый безразмерный блок внутри*/ 
+    border-right: none;
+}
+.menuPharmacyIn{  /* класс внутрених блоков с размером */
+    width: 180px;
+    height: 80px;
+    margin: 12px 0;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-top: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+}
+#LineMenuPharmacy{  /* блок с низу меню */
+    height: 13px;
+    width: 100%;
+    background-color: #c46a02; 
+}
+/* ----------------------------------------------- Конец блока меню Аптеки ----------------------*/
+/* ----------------------------------------------- Контент блока Аптеки ----------------------*/
+#PharmacyContent{
+    height: 800px;
+}
+/* ----------------------------------------------- Контент блока Аптеки ----------------------*/
+/* ----------------------------------------------- Начало блока меню Другие ----------------------*/
+#menuOther{   /*блок меню Магазин*/
+    width: 100%;
+    background-color: #252525;
+    margin-top: 6px;
+}
+.menuOther{   /*клас блоков меню с размером */
+    width: 160px;
+    border-right: #1f1f1f;
+    border-left: 1px solid #1f1f1f;
+}
+#OtherPartOther{
+    background-color: #97AD34;
+    border-bottom: 1px solid #8C9D3E;
+}
+#OtherPartOtherIn{
+    border-bottom: none;
+    border-top: 1px solid #798B2A;
+}
+#OtherPartAbout{ /*у блока About убрали рамку с лева*/
+    border-left: none;
+}
+.OtherDimensionlessIn{ /* класс безразмерных блоков внутри*/
+    height: 80px;
+    margin: 12px 0;
+    padding-bottom: 5px;
+    border: 1px solid #1f1f1f;
+}
+#OtherPartLeftIn{ /* левый безразмерный блок внутри*/ 
+    border-left: none;
+}
+#OtherPartRightIn{ /* правый безразмерный блок внутри*/ 
+    border-right: none;
+}
+.menuOtherIn{  /* класс внутрених блоков с размером */
+    width: 180px;
+    height: 80px;
+    margin: 12px 0;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-top: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+}
+#LineMenuOther{  /* блок с низу меню */
+    height: 13px;
+    width: 100%;
+    background-color: #97AD34; 
+}
+/* ----------------------------------------------- Конец блока меню Другие ----------------------*/
+/* ----------------------------------------------- Контент блока Аптеки ----------------------*/
+#OtherContent{
+    height: 800px;
+}
+/* ----------------------------------------------- Контент блока Аптеки ----------------------*/
+/* ----------------------------------------------- Начало блока меню контакты ----------------------*/
+#menuContact{   /*блок меню Магазин*/
+    width: 100%;
+    background-color: #252525;
+    margin-top: 6px;
+}
+.menuContact{   /*клас блоков меню с размером */
+    width: 160px;
+    border-right: #1f1f1f;
+    border-left: 1px solid #1f1f1f;
+}
+#ContactPartContact{
+    background-color: #499197;
+    border-bottom: 1px solid #3f7c82;
+}
+#ContactPartContactIn{
+    border-bottom: none;
+    border-top: 1px solid #3d797e;
+}
+#ContactPartAbout{ /*у блока About убрали рамку с лева*/
+    border-left: none;
+}
+.ContactDimensionlessIn{ /* класс безразмерных блоков внутри*/
+    height: 80px;
+    margin: 12px 0;
+    padding-bottom: 5px;
+    border: 1px solid #1f1f1f;
+}
+#ContactPartLeftIn{ /* левый безразмерный блок внутри*/ 
+    border-left: none;
+}
+#ContactPartRightIn{ /* правый безразмерный блок внутри*/ 
+    border-right: none;
+}
+.menuContactIn{  /* класс внутрених блоков с размером */
+    width: 180px;
+    height: 80px;
+    margin: 12px 0;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-top: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+}
+#LineMenuContact{  /* блок с низу меню */
+    height: 13px;
+    width: 100%;
+    background-color: #499197; 
+}
+/* ----------------------------------------------- Конец блока меню контакты ----------------------*/
+/* ----------------------------------------------- Контент блока контакты ----------------------*/
+#ContactContent{
+    height: 800px;
+}
+/* ----------------------------------------------- Контент блока контакты ----------------------*/
